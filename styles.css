@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   :root {
     --main-bg-color: #1b1b32;
     --light-grey: #f5f6f7;
@@ -21,7 +21,7 @@
     margin: 20px 0;
   }
   
-  #author-container {
+  #cat-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -47,7 +47,7 @@
     height: 15px;
   }
   
-  .author-name {
+  .cat-name {
     margin: 10px;
   }
   
