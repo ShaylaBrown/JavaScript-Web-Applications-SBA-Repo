@@ -34,4 +34,4 @@ fetch('https://api.thecatapi.com/v1/breeds?limit=10')
   `;
   });
 }; 
-
+loadMoreBtn.addEventListener("click", fetchMoreCats);
