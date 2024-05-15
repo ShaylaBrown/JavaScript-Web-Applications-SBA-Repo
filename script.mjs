@@ -15,6 +15,12 @@ fetch('https://api.thecatapi.com/v1/breeds?limit=10')
   .catch((err) => {
     console.error(`There was an error: ${err}`);
   });
+  const fetchMoreCats = () => {
+    startingIndex += 8;
+    endingIndex += 8;
+  
+    displayCats(catDataArr.slice(startingIndex, endingIndex));
+  };
 
   const displayCats = (cats) => {
     cats.forEach(({ cats, image, url, breed }, index) => {
