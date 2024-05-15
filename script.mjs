@@ -6,11 +6,11 @@ let startingIndex = 0;
 let endingIndex = 8;
 let catDataArr = [];
 
-fetch('https://api.thecatapi.com/v1/images/search?limit=10')
+fetch('https://api.thecatapi.com/v1/breeds?limit=10')
 .then((res) => res.json())
   .then((data) => {
-    catDataArrDataArr = data;
-    console.log("Cat Data Array:", catDataArr); 
+    catDataArr = data;
+    displayCats(catDataArr.slice(startingIndex, endingIndex)); 
   })
   .catch((err) => {
     console.error(`There was an error: ${err}`);
@@ -21,6 +21,8 @@ fetch('https://api.thecatapi.com/v1/images/search?limit=10')
       catContainer.innerHTML += `
       <div id="${index}" class="user-card">
         <h2 class="cat-name">${cats}</h2>
+        
+<img class="user-img" src="${image}" alt="${cats} avatar"/>
       </div>
     `;  
   });
