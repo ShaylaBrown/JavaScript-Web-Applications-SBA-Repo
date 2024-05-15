@@ -20,11 +20,12 @@ fetch('https://api.thecatapi.com/v1/breeds?limit=10')
     cats.forEach(({ cats, image, url, breed }, index) => {
       catContainer.innerHTML += `
       <div id="${index}" class="user-card">
-        <h2 class="cat-name">${cats}</h2>
-        
-<img class="user-img" src="${image}" alt="${cats} avatar"/>
-      </div>
-    `;  
+      <h2 class="author-name">${cats}</h2>
+      <img class="user-img" src="${image}" alt="${cats} avatar" />
+      <p class="bio">${breed}</p>
+      <a class="author-link" href="${url}" target="_blank">${cats}'s author page</a>
+    </div>
+  `;
   });
 }; 
 
