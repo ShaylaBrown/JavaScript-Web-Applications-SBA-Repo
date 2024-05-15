@@ -6,7 +6,7 @@ let startingIndex = 0;
 let endingIndex = 8;
 let catDataArr = [];
 
-fetch('https://api.thecatapi.com/v1/breeds?limit=10')
+fetch('https://api.thecatapi.com/v1/breeds?limit=20')
 .then((res) => res.json())
   .then((data) => {
     catDataArr = data;
@@ -20,6 +20,10 @@ fetch('https://api.thecatapi.com/v1/breeds?limit=10')
     endingIndex += 8;
   
     displayCats(catDataArr.slice(startingIndex, endingIndex));
+    if (catDataArr.length <= endingIndex) {
+      loadMoreBtn.disabled = true;
+      loadMoreBtn.textContent = 'No more data to load';
+    }
   };
 
   const displayCats = (cats) => {
