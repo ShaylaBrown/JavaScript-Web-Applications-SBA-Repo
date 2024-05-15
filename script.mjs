@@ -22,6 +22,7 @@ fetch('https://api.thecatapi.com/v1/breeds?limit=20')
     displayCats(catDataArr.slice(startingIndex, endingIndex));
     if (catDataArr.length <= endingIndex) {
       loadMoreBtn.disabled = true;
+      loadMoreBtn.style.cursor = "not-allowed";
       loadMoreBtn.textContent = 'No more data to load';
     }
   };
