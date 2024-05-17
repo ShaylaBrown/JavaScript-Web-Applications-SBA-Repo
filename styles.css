@@ -5,7 +5,7 @@
   }
 
   :root {
-    --main-bg-color: #1b1b32;
+    --main-bg-color: gold;
     --light-grey: #f5f6f7;
     --dark-purple: #5a01a7;
     --golden-yellow: #feac32;
@@ -17,7 +17,7 @@
   }
   
   .title {
-    color: var(--light-grey);
+    color: blue;
     margin: 20px 0;
   }
   
@@ -41,8 +41,8 @@
     object-fit: cover;
   }
   
-  .purple-divider {
-    background-color: var(--dark-purple);
+  .gold-divider {
+    background-color: gold;
     width: 100%;
     height: 15px;
   }
@@ -63,7 +63,7 @@
     cursor: pointer;
     width: 200px;
     margin: 10px;
-    color: var(--main-bg-color);
+    color: blue;
     font-size: 14px;
     background-color: var(--golden-yellow);
     background-image: linear-gradient(#fecc4c, #ffac33);
